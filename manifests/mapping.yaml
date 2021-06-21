@@ -1,8 +1,9 @@
-apiVersion: getambassador.io/v2
-kind:  Mapping
+apiVersion: x.getambassador.io/v3alpha1
+kind:  AmbassadorMapping
 metadata:
   name:  rollout-demo-mapping
 spec:
+  hostname: '*'
   resolver: endpoint
   prefix: /rollout-demo
   rewrite: /echo
