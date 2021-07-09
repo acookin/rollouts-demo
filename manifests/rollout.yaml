@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
-    getambassador.io/rolloutId: 70a1e5a8-8140-4a5a-80b9-3c85950aee93
+    getambassador.io/rolloutId: 879b546b-5a5e-43d6-911f-e0a9507f82ce
   creationTimestamp: null
   name: rollout-demo
 spec:
@@ -17,34 +17,34 @@ spec:
       steps:
       - setWeight: 10
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 20
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 30
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 40
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 50
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 60
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 70
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 80
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 90
       - pause:
-          duration: 18
+          duration: 12
       - setWeight: 100
       - pause:
-          duration: 18
+          duration: 12
       trafficRouting:
         ambassador:
           mappings:
@@ -56,7 +56,7 @@ spec:
         app: rollout-demo
     spec:
       containers:
-      - image: alixcook11/hello-server:2.0.0
+      - image: alixcook11/hello-server:1.0.0
         imagePullPolicy: Always
         name: echo-v1
         ports:
