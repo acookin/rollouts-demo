@@ -56,10 +56,7 @@ spec:
         app: rollout-demo
     spec:
       containers:
-      - args:
-        - -text=VERSION 1
-        - -listen=:8080
-        image: hashicorp/http-echo:0.2.3
+      - image: alixcook11/hello-server:1.0.0
         imagePullPolicy: Always
         name: echo-v1
         ports:
